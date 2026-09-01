@@ -1,0 +1,74 @@
+:root {
+  --color-primary: #0b5fff;
+  --color-primary-text: #ffffff;
+  --color-secondary: #e6e6e6;
+  --color-secondary-text: #111111;
+  --radius: 6px;
+  --padding-md: 10px 16px;
+  --padding-sm: 6px 10px;
+  --padding-lg: 14px 20px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--padding-md);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.button.primary {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.button.secondary {
+  background: var(--color-secondary);
+  color: var(--color-secondary-text);
+}
+
+.button.sm {
+  padding: var(--padding-sm);
+  font-size: 13px;
+}
+
+.button.md {
+  padding: var(--padding-md);
+  font-size: 14px;
+}
+
+.button.lg {
+  padding: var(--padding-lg);
+  font-size: 16px;
+}
+
+.button.disabled,
+.button[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.content {
+  display: inline-block;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.path {
+  stroke: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
